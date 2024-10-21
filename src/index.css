@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter Tight", system-ui;  
+  overflow-x: hidden;
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  @font-face {
+    font-family: "Inter Tight", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+  }    
+}
+
+/* butoon */
+@layer components{
+  .btn-primary {
+    @apply inline-block px-6 py-13 px-30 border-0 bg-primary-500 text-white font-semibold text-16 leading-110 rounded  hover:bg-primary-700  focus:bg-primary-700  focus:outline-none focus:ring-0 active:bg-primary-800  transition duration-150 ease-in-out;
+  }
+  .btn-head {
+    @apply border-0 bg-primary-500 text-white font-semibold text-16 leading-inherit rounded  hover:bg-primary-700  focus:bg-primary-700  focus:outline-none focus:ring-0 active:bg-primary-800  transition duration-150 ease-in-out;
+  }
+}  

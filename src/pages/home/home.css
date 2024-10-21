@@ -1,0 +1,105 @@
+.swiper{
+  overflow-y: inherit !important;
+}
+.swiper.hero-section {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+}
+
+.hero-section .swiper-slide { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: antiquewhite;  */
+}
+
+.hero-section .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-section .swiper .swiper-wrapper .swiper-slide .slide-box{
+    position: relative;
+ }
+.swiper.hero-section .swiper-wrapper .swiper-slide .slide-box .slide-text{
+    position: relative;
+    z-index: 1;
+ }
+.swiper.hero-section .swiper-wrapper .swiper-slide .slide-box .slide-text::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: -120px;
+    background-color: white;
+    transform: skewX(340deg);
+    border-radius: 8px;
+    /* height: 465px; */
+    width: 250px;
+    z-index: -1;    
+}
+.swiper.hero-section .swiper-wrapper .swiper-slide .slide-box {
+    width: 100%;   
+}
+
+@media screen and (max-width:1024px){
+  .swiper.hero-section .swiper-wrapper .swiper-slide .slide-box .slide-text::after{
+    background-color: red;
+    width: 140px;
+    transform: skewX(350deg);
+    right: -110px;
+  }
+}
+
+@media screen and (max-width:768px){
+  .swiper.hero-section .swiper-wrapper .swiper-slide .slide-box .slide-text::after{
+    background-color: red;
+    width: 140px;
+    transform: skewX(350deg);
+    right: -110px;
+    display: none;
+  }
+}
+
+/* testimonial silder */
+
+.swiper.testimonial{
+  position: relative;
+  overflow: inherit;
+}
+.swiper.testimonial .swiper-wrapper{
+  overflow: hidden;
+}
+
+.swiper.testimonial .swiper-button-prev,
+.swiper.testimonial .swiper-button-next {
+  background-color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+} 
+.swiper.testimonial .swiper-button-prev::after,
+.swiper.testimonial .swiper-button-next::after {
+  font-size: 24px;
+}
+.swiper.testimonial .swiper-button-prev{
+  top: -30px;
+  left:35%;
+  z-index: 10;
+}
+.swiper.testimonial .swiper-button-next {
+  top: -30px;
+  left: 65%;
+}
